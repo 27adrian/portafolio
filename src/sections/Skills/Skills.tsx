@@ -19,7 +19,8 @@ const skills = [
   {
     number: "04",
     title: "Database & Cloud",
-    technologies: "PostgreSQL · Prisma · Azure",
+    technologies:
+      "PostgreSQL · Prisma · Azure  · Supabase · Firebase · Render · Vercel",
   },
 ];
 
@@ -30,27 +31,17 @@ function Skills() {
       className="relative px-6 py-32 md:px-12 md:py-40 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-6 text-sm uppercase tracking-[0.3em] text-white/30"
-        >
-          Skills
-        </motion.p>
-
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20 text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl"
+          className="mb-12 text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl"
         >
-          Technologies I work with.
+          Tecnologías con las que trabajo.
         </motion.h2>
 
-        <div className="border-t border-white/10">
+        <div className="grid gap-4 md:gap-5">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.number}
@@ -59,18 +50,20 @@ function Skills() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{
                 duration: 0.7,
-                delay: index * 0.1,
+                delay: index * 0.08,
               }}
-              className="group border-b border-white/10 py-8 transition-colors duration-500 hover:bg-white/[0.02]"
+              className="group rounded-[1.5rem] border border-white/10 bg-white/[0.015] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.02] md:p-7"
             >
-              <div className="grid gap-6 md:grid-cols-[80px_220px_1fr] md:items-center">
-                <span className="text-sm text-white/20">{skill.number}</span>
+              <div className="grid gap-4 md:grid-cols-[80px_210px_1fr] md:items-center md:gap-8">
+                <span className="text-sm font-medium tracking-[0.22em] text-white/20">
+                  {skill.number}
+                </span>
 
-                <h3 className="text-xl font-medium text-white transition-transform duration-500 group-hover:translate-x-2">
+                <h3 className="text-xl font-medium text-white transition-transform duration-500 group-hover:translate-x-1">
                   {skill.title}
                 </h3>
 
-                <p className="text-base text-white/40 transition-colors duration-500 group-hover:text-white/70">
+                <p className="text-base leading-relaxed text-white/50 transition-colors duration-500 group-hover:text-white/80">
                   {skill.technologies}
                 </p>
               </div>

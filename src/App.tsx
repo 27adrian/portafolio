@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#080808] text-white">
+    <main className="min-h-screen overflow-x-hidden bg-[#080808] bg-[radial-gradient(circle_at_top,_rgba(239,68,68,0.12),transparent_35%),linear-gradient(180deg,#090909_0%,#050505_100%)] text-white antialiased">
       {loading && <Loader onComplete={() => setLoading(false)} />}
 
       <CustomCursor />

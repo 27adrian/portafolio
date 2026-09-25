@@ -15,7 +15,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         duration: 1,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]"
+      className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] shadow-[0_28px_80px_rgba(0,0,0,0.18)]"
     >
       {/* Visual */}
       <div className="relative flex min-h-[450px] items-center justify-center overflow-hidden bg-[#0b0b0b]">
@@ -104,7 +104,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             transition={{ duration: 0.3 }}
             className="group/button rounded-full border border-white/20 px-6 py-3 text-sm text-white transition-all duration-300 hover:border-red-500/50 hover:bg-white hover:text-black"
           >
-            View project
+            Ver proyecto
             <span className="ml-2 inline-block transition-transform duration-300 group-hover/button:translate-x-1">
               →
             </span>

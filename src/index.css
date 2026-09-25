@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, sans-serif;
+  font-family: Inter, "Segoe UI", sans-serif;
   background: #070707;
   color: #f5f5f5;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 
 * {
@@ -22,7 +25,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #070707;
+  background:
+    radial-gradient(circle at top, rgba(239, 68, 68, 0.12), transparent 30%),
+    linear-gradient(180deg, #090909 0%, #050505 100%);
+}
+
+#root {
+  min-height: 100vh;
 }
 
 button,
@@ -35,15 +44,70 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 ::selection {
-  background: #ff2a2a;
+  background: rgba(239, 68, 68, 0.9);
   color: white;
+}
+
+.section-shell {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(17, 17, 17, 0.72);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.eyebrow::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.9), rgba(255, 255, 255, 0.2));
+}
+
+.section-title {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.soft-copy {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.soft-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.soft-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
 }
 
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -51,10 +115,10 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff2a2a;
+  background: rgba(239, 68, 68, 0.8);
 }

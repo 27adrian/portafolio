@@ -24,14 +24,14 @@ function Projects() {
             <span className="h-px w-10 bg-red-500" />
 
             <p className="text-xs uppercase tracking-[0.35em] text-white/30">
-              Selected work
+              Trabajo destacado
             </p>
           </div>
 
           <h2 className="max-w-4xl text-5xl font-medium tracking-[-0.04em] sm:text-6xl md:text-7xl">
-            Projects I&apos;ve
+            Proyectos que
             <br />
-            <span className="text-white/20">built along the way.</span>
+            <span className="text-white/20">he construido.</span>
           </h2>
         </motion.div>
 

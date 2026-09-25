@@ -25,7 +25,7 @@ function Contact() {
           transition={{ duration: 0.7 }}
           className="mb-8 text-sm uppercase tracking-[0.3em] text-white/30"
         >
-          Contact
+          Contacto
         </motion.p>
 
         {/* Main heading */}
@@ -39,9 +39,9 @@ function Contact() {
           }}
           className="max-w-5xl text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
         >
-          Have a project
+          ¿Tienes un proyecto
           <br />
-          <span className="text-white/30">in mind?</span>
+          <span className="text-white/30">en mente?</span>
         </motion.h2>
 
         {/* Divider */}
@@ -66,7 +66,7 @@ function Contact() {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <p className="mb-4 text-sm text-white/30">
-              Let&apos;s work together
+              Trabajemos juntos
             </p>
 
             <a
@@ -95,7 +95,7 @@ function Contact() {
             whileTap={{ scale: 0.98 }}
             className="inline-flex w-fit items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition-colors duration-300 hover:bg-white/90"
           >
-            Start a conversation
+            Iniciar conversación
             <ArrowUpRight size={18} />
           </motion.a>
         </div>

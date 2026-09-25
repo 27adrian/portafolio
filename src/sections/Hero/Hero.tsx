@@ -5,8 +5,9 @@ import {
   type Variants,
 } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
-import MagneticButton from "../../components/MagneticButton/MagneticButton";
 import { useEffect } from "react";
+
+import MagneticButton from "../../components/MagneticButton/MagneticButton";
 
 interface HeroProps {
   isReady: boolean;
@@ -150,69 +151,70 @@ function Hero({ isReady }: HeroProps) {
         animate={isReady ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 1.4 }}
         className="absolute right-6 top-28 hidden text-right md:right-12 lg:right-20 md:block"
-      >
-        <p className="text-[10px] uppercase tracking-[0.3em] text-white/20">
-          Based in Peru
-        </p>
-
-        <p className="mt-2 text-xs text-white/30">2026</p>
-      </motion.div>
+      ></motion.div>
 
       {/* ================= CONTENT ================= */}
 
       <div className="mx-auto w-full max-w-7xl">
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={
-            isReady
-              ? {
-                  opacity: 1,
-                  x: 0,
-                }
-              : {
-                  opacity: 0,
-                  x: -30,
-                }
-          }
-          transition={{
-            duration: 0.8,
-            delay: 0.05,
-          }}
-          className="mb-8 flex items-center gap-4"
-        >
-          <span className="h-px w-10 bg-red-500" />
+        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+          <div className="flex-1">
+            {/* Eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={
+                isReady
+                  ? {
+                      opacity: 1,
+                      x: 0,
+                    }
+                  : {
+                      opacity: 0,
+                      x: -30,
+                    }
+              }
+              transition={{
+                duration: 0.8,
+                delay: 0.05,
+              }}
+              className="mb-8 flex items-center gap-4"
+            >
+              <span className="h-px w-10 bg-red-500" />
 
-          <p className="text-xs uppercase tracking-[0.35em] text-white/40">
-            Full Stack Developer
-          </p>
-        </motion.div>
+              <p className="text-xs uppercase tracking-[0.35em] text-white/40">
+                Desarrollador Full Stack
+              </p>
+            </motion.div>
 
-        {/* Main title */}
-        <motion.h1
-          variants={titleContainer}
-          initial="hidden"
-          animate={isReady ? "visible" : "hidden"}
-          className="relative max-w-6xl text-[clamp(4rem,11vw,10rem)] font-semibold leading-[0.86] tracking-[-0.06em]"
-        >
-          <span className="block overflow-hidden">
-            <motion.span variants={titleItem} className="block">
-              Adrian
-            </motion.span>
-          </span>
+            {/* Main title */}
+            <motion.h1
+              variants={titleContainer}
+              initial="hidden"
+              animate={isReady ? "visible" : "hidden"}
+              className="relative max-w-6xl text-[clamp(4rem,11vw,10rem)] font-semibold leading-[0.86] tracking-[-0.06em]"
+            >
+              <span className="block overflow-hidden">
+                <motion.span variants={titleItem} className="block">
+                  Adrián
+                </motion.span>
+              </span>
 
-          <span className="block overflow-hidden">
-            <motion.span variants={titleItem} className="block text-white/25">
-              Muñoz
-            </motion.span>
-          </span>
+              <span className="block overflow-hidden">
+                <motion.span
+                  variants={titleItem}
+                  className="block text-white/25"
+                >
+                  Muñoz
+                </motion.span>
+              </span>
 
-          <span className="block overflow-hidden">
-            <motion.span variants={titleItem} className="block">
-              Roncal<span className="text-red-500">.</span>
-            </motion.span>
-          </span>
-        </motion.h1>
+              <span className="block overflow-hidden">
+                <motion.span variants={titleItem} className="block">
+                  Roncal<span className="text-red-500">.</span>
+                </motion.span>
+              </span>
+            </motion.h1>
+          </div>
+        </div>
 
         {/* Description + actions */}
         <div className="mt-12 flex flex-col justify-between gap-10 md:flex-row md:items-end">
@@ -235,8 +237,8 @@ function Hero({ isReady }: HeroProps) {
             }}
             className="max-w-md text-base leading-relaxed text-white/40 md:text-lg"
           >
-            I build modern digital experiences, mobile applications and scalable
-            backend systems.
+            Diseño interfaces modernas, apps móviles y sistemas que
+            acompañan procesos reales y crecimiento de negocio.
           </motion.p>
 
           <motion.div
@@ -258,9 +260,9 @@ function Hero({ isReady }: HeroProps) {
             }}
             className="flex items-center gap-4"
           >
-            <MagneticButton variant="primary">View my work</MagneticButton>
+            <MagneticButton variant="primary">Ver proyectos</MagneticButton>
 
-            <MagneticButton variant="secondary">Contact me</MagneticButton>
+            <MagneticButton variant="secondary">Contáctame</MagneticButton>
           </motion.div>
         </div>
       </div>
@@ -277,7 +279,7 @@ function Hero({ isReady }: HeroProps) {
           <ArrowDownRight size={16} />
 
           <span className="text-[10px] uppercase tracking-[0.3em]">
-            Scroll to explore
+            Desliza para explorar
           </span>
         </div>
       </motion.div>

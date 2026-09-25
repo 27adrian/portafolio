@@ -43,8 +43,8 @@ function Education() {
           <div className="mb-5 flex items-center gap-4">
             <span className="h-px w-8 bg-red-500" />
 
-            <p className="text-xs uppercase tracking-[0.35em] text-white/">
-              Educación & certificaciones
+            <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+              Educación y certificaciones
             </p>
           </div>
 

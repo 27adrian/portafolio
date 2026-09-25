@@ -97,14 +97,14 @@ function About() {
             <span className="h-px w-10 bg-red-500" />
 
             <p className="text-xs uppercase tracking-[0.35em] text-white/30">
-              About me
+              Sobre mí
             </p>
           </div>
 
           <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-[-0.04em] sm:text-6xl md:text-7xl">
-            I build digital products
+            Construyo productos digitales
             <br />
-            <span className="text-white/20">that solve real problems.</span>
+            <span className="text-white/20">que resuelven problemas reales.</span>
           </h2>
         </motion.div>
 
@@ -396,13 +396,13 @@ function About() {
             }}
           >
             <p className="max-w-xl text-lg leading-relaxed text-white/45 md:text-xl">
-              I&apos;m a developer focused on building modern digital
-              experiences across web, mobile and backend systems.
+              Soy un desarrollador enfocado en crear experiencias digitales
+              modernas para web, móvil y sistemas.
             </p>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/30">
-              I enjoy turning ideas into functional products, from the interface
-              users interact with to the architecture running behind it.
+              Me gusta transformar ideas en productos útiles, desde la interfaz
+              que usa la gente hasta la arquitectura que los sostiene.
             </p>
 
             {/* =========================
@@ -414,7 +414,7 @@ function About() {
                 <p className="text-xl font-medium">Web</p>
 
                 <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-white/25">
-                  Development
+                  Desarrollo
                 </p>
               </div>
 
@@ -430,7 +430,7 @@ function About() {
                 <p className="text-xl font-medium">Backend</p>
 
                 <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-white/25">
-                  Architecture
+                  Arquitectura
                 </p>
               </div>
 
