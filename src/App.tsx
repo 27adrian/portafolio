@@ -12,6 +12,7 @@ import Experience from "./sections/Experience/Experience";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import TechStack from "./sections/TechStack/TechStack";
+import Education from "./sections/Education/Education";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -49,6 +50,7 @@ function App() {
       <Projects />
       <TechStack />
       <Experience />
+      <Education />
       <Contact />
       <Footer />
     </main>

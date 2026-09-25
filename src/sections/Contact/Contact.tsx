@@ -75,7 +75,7 @@ function Contact() {
             >
               <Mail size={22} strokeWidth={1.5} className="text-white/40" />
 
-              <span>your@email.com</span>
+              <span>dadrianmr.27@gmail.com</span>
 
               <ArrowUpRight
                 size={20}
@@ -86,7 +86,7 @@ function Contact() {
 
           {/* CTA */}
           <motion.a
-            href="mailto:your@email.com"
+            href="mailto:dadrianmr.27@gmail.com"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

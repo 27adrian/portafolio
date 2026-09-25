@@ -18,7 +18,7 @@ function Footer() {
           {/* Social */}
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="https://github.com/27adrian"
               target="_blank"
               rel="noreferrer"
               className="group flex items-center gap-2 text-sm text-white/40 transition-colors duration-300 hover:text-white"
@@ -31,7 +31,7 @@ function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/adri%C3%A1n-mu%C3%B1oz-roncal-06258533b/"
               target="_blank"
               rel="noreferrer"
               className="group flex items-center gap-2 text-sm text-white/40 transition-colors duration-300 hover:text-white"
