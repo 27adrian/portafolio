@@ -14,6 +14,7 @@ import tailwindcss from "../assets/technoogies/tailwindcss.svg?raw";
 import vercel from "../assets/technoogies/vercel.svg?raw";
 import git from "../assets/technoogies/git.svg?raw";
 import github from "../assets/technoogies/github.svg?raw";
+import docker from "../assets/technoogies/docker.svg?raw";
 
 export interface Technology {
   name: string;
@@ -136,4 +137,11 @@ export const technologies: Technology[] = [
     icon: github,
     color: "#181717",
   },
+  {
+    name: "Docker",
+    category: "Tools",
+    description: "Containerization for consistent development and deployment.",
+    icon: docker,
+    color: "#2496ED",
+  }
 ];

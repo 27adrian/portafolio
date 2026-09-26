@@ -23,12 +23,12 @@ function Education() {
   return (
     <section
       id="education"
-      className="relative overflow-hidden px-6 py-24 md:px-12 md:py-32 lg:px-20"
+      className="relative w-full overflow-hidden py-24 md:py-32"
     >
       {/* Background glow */}
       <div className="pointer-events-none absolute right-[-10%] top-1/2 h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-red-600/[0.035] blur-[140px]" />
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="container-page relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,6 @@ function Education() {
             La base de <span className="text-white/20">mi camino.</span>
           </h2>
         </motion.div>
-
         {/* Credentials */}
         <div className="grid overflow-hidden rounded-xl border border-white/[0.08] md:grid-cols-2">
           {credentials.map((item, index) => (

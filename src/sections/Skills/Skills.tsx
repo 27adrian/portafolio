@@ -26,11 +26,8 @@ const skills = [
 
 function Skills() {
   return (
-    <section
-      id="skills"
-      className="relative px-6 py-32 md:px-12 md:py-40 lg:px-20"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id="skills" className="relative w-full py-32 md:py-40">
+      <div className="container-page">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -11,7 +11,7 @@ function TechStack() {
   return (
     <section
       id="tech-stack"
-      className="relative overflow-hidden px-6 py-32 md:px-12 md:py-40 lg:px-20"
+  className="relative w-full overflow-hidden py-32 md:py-40"
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
@@ -33,8 +33,7 @@ function TechStack() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
-        {/* Header */}
+<div className="container-page relative">        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +106,7 @@ function TechStack() {
                 <div className="relative flex flex-col justify-center">
                   {/* Top row */}
                   <div className="flex flex-wrap justify-center gap-3">
-                    {technologies.slice(0, 4).map((technology) => (
+                    {technologies.slice(0, 5).map((technology) => (
                       <TechKey
                         key={technology.name}
                         technology={technology}
@@ -121,7 +120,7 @@ function TechStack() {
 
                   {/* Second row */}
                   <div className="mt-3 flex flex-wrap justify-center gap-3">
-                    {technologies.slice(4, 8).map((technology) => (
+                    {technologies.slice(5, 10).map((technology) => (
                       <TechKey
                         key={technology.name}
                         technology={technology}
@@ -135,7 +134,7 @@ function TechStack() {
 
                   {/* Third row */}
                   <div className="mt-3 flex flex-wrap justify-center gap-3">
-                    {technologies.slice(8, 12).map((technology) => (
+                    {technologies.slice(10, 15).map((technology) => (
                       <TechKey
                         key={technology.name}
                         technology={technology}
@@ -149,7 +148,7 @@ function TechStack() {
 
                   {/* Fourth row */}
                   <div className="mt-3 flex flex-wrap justify-center gap-3">
-                    {technologies.slice(12, 16).map((technology) => (
+                    {technologies.slice(15, 20).map((technology) => (
                       <TechKey
                         key={technology.name}
                         technology={technology}

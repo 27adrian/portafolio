@@ -6,16 +6,19 @@ export interface Project {
   technologies: string[];
   category: string;
   featured?: boolean;
+  repoFrontend?: string;
+  repoBackend?: string;
+  repository?: string;
 }
 
 export const projects: Project[] = [
   {
     number: "01",
     title: "MedAlert",
-    subtitle: "Family medication management",
-    category: "Mobile Application",
+    subtitle: "Gestión familiar de medicamentos",
+    category: "Aplicación móvil",
     description:
-      "A mobile application designed to help families manage patients, medications, schedules, stock and treatment adherence.",
+      "Aplicación móvil diseñada para ayudar a las familias a gestionar pacientes, medicamentos, horarios, stock y seguimiento de tratamientos.",
     technologies: [
       "Flutter",
       "Dart",
@@ -26,45 +29,42 @@ export const projects: Project[] = [
       "Azure",
     ],
     featured: true,
+    repoFrontend: "https://github.com/27adrian/MedAlert-Frontend",
+    repoBackend: "https://github.com/27adrian/MedAlert-Backend",
   },
 
   {
     number: "02",
     title: "ERP Moshell",
-    subtitle: "Textile manufacturing management",
-    category: "ERP System",
+    subtitle: "Gestión para manufactura textil",
+    category: "Sistema ERP",
     description:
-      "An ERP system focused on managing inventory, customers, suppliers, purchases, orders and production processes.",
+      "Sistema ERP orientado a la gestión de inventario, clientes, proveedores, compras, pedidos y procesos de producción.",
     technologies: ["React", "Laravel", "PHP", "PostgreSQL"],
+    repoFrontend: "https://github.com/JuanMartinCavero/erp-frontend-moshell",
+    repoBackend: "https://github.com/JuanMartinCavero/erp-backend-moshell",
   },
 
   {
     number: "03",
-    title: "Business Management System",
-    subtitle: "Service management platform",
-    category: "Web Application",
+    title: "ProyectMega",
+    subtitle: "Plataforma de gestión",
+    category: "Aplicación web - Intranet",
     description:
-      "A web platform for managing services, customers, accounts receivable, materials, inventory and business revenue.",
+      "Plataforma web para gestionar servicios, clientes, cuentas por cobrar, materiales, inventario e ingresos del negocio.",
     technologies: ["React", "Express.js", "MongoDB"],
+    repoFrontend: "https://github.com/27adrian/Front-ProyectMega",
+    repoBackend: "https://github.com/27adrian/Back-ProyectMega",
   },
 
   {
     number: "04",
     title: "People Detection",
-    subtitle: "People detection & occupancy control",
-    category: "Computer Vision",
+    subtitle: "Detección y control de aforo",
+    category: "Visión por computadora",
     description:
-      "A computer vision project for detecting people and processing video captured through a camera.",
+      "Proyecto de visión por computadora para detectar personas y procesar video capturado mediante una cámara.",
     technologies: ["Python", "Computer Vision", "Image Processing"],
-  },
-
-  {
-    number: "05",
-    title: "Warehouse Management",
-    subtitle: "Purchases, sales & inventory",
-    category: "Desktop Application",
-    description:
-      "A management system for warehouse operations, purchases, sales and payment methods.",
-    technologies: ["C#", "SQL"],
+    repository: "https://github.com/27adrian/Person_Counter",
   },
 ];

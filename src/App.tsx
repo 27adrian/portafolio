@@ -5,7 +5,6 @@ import Loader from "./components/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
 import Hero from "./sections/Hero/Hero";
-import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
 import Experience from "./sections/Experience/Experience";
@@ -45,7 +44,6 @@ function App() {
       <Navbar />
 
       <Hero isReady={!loading} />
-      <About />
       <Skills />
       <Projects />
       <TechStack />

@@ -7,7 +7,8 @@ const experiences = [
     company: "NEONHOUSELED S.A.C.",
     description:
       "Desarrollo y mantenimiento de soluciones web para proyectos como ASDEN y CONTIGOVOY, participando en la implementación de interfaces, funcionalidades y mejoras de experiencia de usuario.",
-    technologies: "ReactJS · Laravel · PHP  · SQL Workbench · Git · GitHub · NextJS · TailwindCSS ",
+    technologies:
+      "ReactJS · Laravel · PHP  · SQL Workbench · Git · GitHub · NextJS · TailwindCSS ",
   },
   {
     period: "Ago 2024 — Nov 2024",
@@ -23,14 +24,15 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden px-6 py-32 md:px-12 md:py-40 lg:px-20"
+      className="relative w-full overflow-hidden py-32 md:py-40"
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute right-[-10%] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-red-600/[0.04] blur-[150px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="container-page relative">
+        {" "}
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -52,7 +54,6 @@ function Experience() {
             <span className="text-white/20">me hizo crecer.</span>
           </h2>
         </motion.div>
-
         {/* Timeline */}
         <div className="relative mt-24">
           {/* Línea */}
