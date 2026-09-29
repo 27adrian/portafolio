@@ -304,9 +304,17 @@ function Hero({ isReady }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.75 }}
               className="mt-8 flex flex-wrap items-center gap-4"
             >
-              <MagneticButton variant="primary">Ver proyectos</MagneticButton>
+              <MagneticButton
+                href="#projects"
+                variant="primary"
+                className="!bg-red-500 !text-white hover:!bg-red-600"
+              >
+                Ver proyectos
+              </MagneticButton>
 
-              <MagneticButton variant="secondary">Contáctame</MagneticButton>
+              <MagneticButton href="#contact" variant="secondary">
+                Contáctame
+              </MagneticButton>
             </motion.div>
 
             {/* Bottom information */}
@@ -446,8 +454,8 @@ function Hero({ isReady }: HeroProps) {
               <div
                 className="
                   relative
-                  h-[320px]
-                  w-[320px]
+                  h-[min(82vw,320px)]
+                  w-[min(82vw,320px)]
                   overflow-hidden
                   rounded-full
                   border

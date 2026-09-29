@@ -34,7 +34,7 @@ function CustomCursor() {
         x,
         y,
       }}
-      className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white md:block"
+      className="custom-cursor pointer-events-none fixed left-0 top-0 z-[9999] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white"
     />
   );
 }

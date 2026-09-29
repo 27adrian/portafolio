@@ -24,7 +24,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="relative w-full overflow-hidden py-32 md:py-40"
+      className="relative w-full overflow-hidden py-20 md:py-32 lg:py-40"
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">

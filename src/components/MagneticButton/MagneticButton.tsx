@@ -3,16 +3,18 @@ import { type ReactNode, useRef } from "react";
 
 interface MagneticButtonProps {
   children: ReactNode;
+  href: string;
   variant?: "primary" | "secondary";
-  onClick?: () => void;
+  className?: string;
 }
 
 function MagneticButton({
   children,
+  href,
   variant = "primary",
-  onClick,
+  className = "",
 }: MagneticButtonProps) {
-  const ref = useRef<HTMLButtonElement>(null);
+  const ref = useRef<HTMLAnchorElement>(null);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -27,7 +29,7 @@ function MagneticButton({
     damping: 20,
   });
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
@@ -46,24 +48,24 @@ function MagneticButton({
 
   const isPrimary = variant === "primary";
 
+  const baseClasses = isPrimary
+    ? "inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-300 hover:bg-white/90"
+    : "inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5";
+
   return (
-    <motion.button
+    <motion.a
       ref={ref}
+      href={href}
       style={{
         x: springX,
         y: springY,
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      onClick={onClick}
-      className={
-        isPrimary
-          ? "rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-colors duration-300 hover:bg-white/90"
-          : "rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5"
-      }
+      className={`${baseClasses} ${className}`}
     >
       {children}
-    </motion.button>
+    </motion.a>
   );
 }
 

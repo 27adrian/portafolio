@@ -18,127 +18,85 @@ function Navbar() {
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -25 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.8,
         delay: 1.4,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="
-        fixed
-        left-0
-        right-0
-        top-0
-        z-50
-        px-4
-        pt-4
-        sm:px-6
-        sm:pt-5
-        lg:px-10
-        lg:pt-6
-      "
+      className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-5 lg:px-10 lg:pt-6"
     >
       <nav
         className="
-          mx-auto
-          flex
-          h-[58px]
-          max-w-[1280px]
-          items-center
-          justify-between
-          rounded-full
-          border
-          border-white/[0.08]
-          bg-[#090909]/70
-          px-4
-          shadow-[0_15px_50px_rgba(0,0,0,0.25)]
+          mx-auto flex h-[58px] items-center justify-between
+          rounded-full border border-white/[0.08]
+          bg-[#090909]/75 px-4
+          shadow-[0_15px_50px_rgba(0,0,0,0.3)]
           backdrop-blur-2xl
           sm:px-5
-          lg:h-[62px]
-          lg:px-6
+          lg:h-[62px] lg:px-6
         "
       >
-        {/* =================================================
+        {/* =====================================================
             LOGO
-        ================================================= */}
+        ===================================================== */}
 
         <a
           href="#hero"
           onClick={closeMenu}
           className="group flex items-center gap-3"
         >
-          {/* Status */}
-          <span className="relative flex h-2.5 w-2.5 items-center justify-center">
+          <span className="relative flex h-2 w-2 items-center justify-center">
             <span className="absolute h-full w-full animate-ping rounded-full bg-red-500/30" />
 
             <span className="relative h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.7)]" />
           </span>
 
-          {/* Name */}
-          <span
-            className="
-              text-[12px]
-              font-semibold
-              tracking-[0.2em]
-              text-white
-              transition-colors
-              duration-300
-              group-hover:text-white
-              sm:text-[13px]
-            "
-          >
+          <span className="text-[12px] font-semibold tracking-[0.2em] text-white sm:text-[13px]">
             ADRIÁN
-            <span className="text-white/30">.DEV</span>
+            <span className="text-white/25">.DEV</span>
           </span>
         </a>
 
-        {/* =================================================
-            DESKTOP NAV
-        ================================================= */}
+        {/* =====================================================
+            DESKTOP NAVIGATION
+        ===================================================== */}
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 lg:flex">
           {navItems.map((item, index) => (
             <a
               key={item.href}
               href={item.href}
               className="
-                group
-                relative
-                flex
-                items-center
-                gap-2
-                rounded-full
-                px-4
-                py-2.5
-                text-[10px]
-                uppercase
-                tracking-[0.18em]
+                group relative flex items-center gap-2
+                rounded-full px-4 py-2.5
+                text-[10px] uppercase tracking-[0.18em]
                 text-white/35
-                transition-all
-                duration-300
+                transition-all duration-300
                 hover:bg-white/[0.04]
                 hover:text-white
               "
             >
-              <span className="text-[8px] text-white/[0.15] transition-colors duration-300 group-hover:text-red-500/60">
+              <span
+                className="
+                  text-[8px] text-white/[0.14]
+                  transition-colors duration-300
+                  group-hover:text-red-500/70
+                "
+              >
                 0{index + 1}
               </span>
 
               {item.label}
 
-              {/* Active/hover line */}
               <span
                 className="
-                  absolute
-                  bottom-1.5
-                  left-1/2
-                  h-px
-                  w-0
-                  -translate-x-1/2
+                  absolute bottom-1.5 left-1/2
+                  h-px w-0 -translate-x-1/2
                   bg-red-500
-                  transition-all
-                  duration-300
+                  shadow-[0_0_8px_rgba(239,68,68,0.5)]
+                  transition-all duration-300
                   group-hover:w-5
                 "
               />
@@ -146,29 +104,21 @@ function Navbar() {
           ))}
         </div>
 
-        {/* =================================================
-            CONTACT
-        ================================================= */}
+        {/* =====================================================
+            CONTACT CTA
+        ===================================================== */}
 
         <a
           href="#contact"
           className="
-            group
-            hidden
-            items-center
-            gap-2
+            group hidden items-center gap-2
             rounded-full
-            border
-            border-white/[0.08]
+            border border-white/[0.08]
             bg-white/[0.025]
-            px-4
-            py-2.5
-            text-[10px]
-            uppercase
-            tracking-[0.18em]
-            text-white/50
-            transition-all
-            duration-300
+            px-4 py-2.5
+            text-[10px] uppercase tracking-[0.18em]
+            text-white/45
+            transition-all duration-300
             hover:border-red-500/30
             hover:bg-red-500/[0.06]
             hover:text-white
@@ -177,13 +127,10 @@ function Navbar() {
         >
           <span
             className="
-              h-1.5
-              w-1.5
-              rounded-full
+              h-1.5 w-1.5 rounded-full
               bg-red-500/70
               shadow-[0_0_8px_rgba(239,68,68,0.5)]
-              transition-transform
-              duration-300
+              transition-transform duration-300
               group-hover:scale-125
             "
           />
@@ -192,17 +139,16 @@ function Navbar() {
             size={13}
             strokeWidth={1.5}
             className="
-              transition-transform
-              duration-300
+              transition-transform duration-300
               group-hover:-translate-y-0.5
               group-hover:translate-x-0.5
             "
           />
         </a>
 
-        {/* =================================================
+        {/* =====================================================
             MOBILE BUTTON
-        ================================================= */}
+        ===================================================== */}
 
         <button
           type="button"
@@ -210,23 +156,15 @@ function Navbar() {
           aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={menuOpen}
           className="
-            flex
-            h-10
-            w-10
-            items-center
-            justify-center
+            flex h-10 w-10 items-center justify-center
             rounded-full
-            border
-            border-white/[0.08]
+            border border-white/[0.08]
             bg-white/[0.03]
             text-white/60
-            transition-all
-            duration-300
+            transition-all duration-300
             hover:border-red-500/30
             hover:bg-red-500/[0.05]
             hover:text-white
-            md:h-10
-            md:w-10
             lg:hidden
           "
         >
@@ -283,29 +221,34 @@ function Navbar() {
               ease: [0.22, 1, 0.36, 1],
             }}
             className="
-              mx-auto
-              mt-3
-              max-w-[1280px]
+              mx-auto mt-3 max-w-[1280px]
               overflow-hidden
               rounded-[1.5rem]
-              border
-              border-white/[0.08]
+              border border-white/[0.08]
               bg-[#090909]/95
               shadow-[0_30px_80px_rgba(0,0,0,0.5)]
               backdrop-blur-2xl
               lg:hidden
             "
           >
-            {/* Top label */}
-            <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
-              <span className="text-[9px] uppercase tracking-[0.3em] text-white/20">
-                Navegación
-              </span>
+            {/* Header */}
 
-              <span className="text-[9px] text-white/10">ADRIÁN.DEV</span>
+            <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
+              <div className="flex items-center gap-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]" />
+
+                <span className="text-[9px] uppercase tracking-[0.3em] text-white/20">
+                  Navegación
+                </span>
+              </div>
+
+              <span className="text-[9px] tracking-[0.2em] text-white/10">
+                01 — 04
+              </span>
             </div>
 
             {/* Links */}
+
             <div className="p-2">
               {navItems.map((item, index) => (
                 <motion.a
@@ -325,15 +268,9 @@ function Navbar() {
                     duration: 0.3,
                   }}
                   className="
-                    group
-                    flex
-                    items-center
-                    justify-between
-                    rounded-xl
-                    px-4
-                    py-4
-                    transition-colors
-                    duration-300
+                    group flex items-center justify-between
+                    rounded-xl px-4 py-4
+                    transition-colors duration-300
                     hover:bg-white/[0.04]
                   "
                 >
@@ -352,8 +289,7 @@ function Navbar() {
                     strokeWidth={1.5}
                     className="
                       text-white/15
-                      transition-all
-                      duration-300
+                      transition-all duration-300
                       group-hover:-translate-y-0.5
                       group-hover:translate-x-0.5
                       group-hover:text-red-500
@@ -364,28 +300,24 @@ function Navbar() {
             </div>
 
             {/* Contact */}
+
             <motion.a
               href="#contact"
               onClick={closeMenu}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.3,
+              }}
               className="
-                mx-3
-                mb-3
-                flex
-                items-center
-                justify-between
+                mx-3 mb-3 flex items-center justify-between
                 rounded-xl
-                border
-                border-red-500/20
+                border border-red-500/20
                 bg-red-500/[0.06]
-                px-4
-                py-4
-                text-sm
-                text-white
-                transition-all
-                duration-300
+                px-4 py-4
+                text-sm text-white
+                transition-all duration-300
                 hover:bg-red-500/[0.1]
               "
             >

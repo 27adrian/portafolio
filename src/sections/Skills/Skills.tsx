@@ -26,7 +26,7 @@ const skills = [
 
 function Skills() {
   return (
-    <section id="skills" className="relative w-full py-32 md:py-40">
+    <section id="skills" className="relative w-full py-20 md:py-32 lg:py-40">
       <div className="container-page">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}

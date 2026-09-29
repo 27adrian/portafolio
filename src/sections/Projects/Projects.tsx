@@ -9,7 +9,7 @@ function Projects() {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="relative w-full py-32 md:py-40">
+    <section id="projects" className="relative w-full py-20 md:py-32 lg:py-40">
       {/* =====================================================
           BACKGROUND
       ===================================================== */}

@@ -50,6 +50,44 @@ a {
   font: inherit;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(239, 68, 68, 0.9);
+  outline-offset: 4px;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+main > section + section {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.custom-cursor {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

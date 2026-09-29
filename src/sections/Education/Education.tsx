@@ -23,7 +23,7 @@ function Education() {
   return (
     <section
       id="education"
-      className="relative w-full overflow-hidden py-24 md:py-32"
+      className="relative w-full overflow-hidden py-24 md:py-40 lg:py-48"
     >
       {/* Background glow */}
       <div className="pointer-events-none absolute right-[-10%] top-1/2 h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-red-600/[0.035] blur-[140px]" />
@@ -38,7 +38,7 @@ function Education() {
             duration: 0.7,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mb-12"
+          className="mb-16 md:mb-20"
         >
           <div className="mb-5 flex items-center gap-4">
             <span className="h-px w-8 bg-red-500" />
@@ -106,7 +106,7 @@ function Education() {
                   <img
                     src={az900}
                     alt="Microsoft Azure Fundamentals AZ-900"
-                    className="h-30 w-auto object-contain"
+                    className="h-[7.5rem] w-auto object-contain"
                   />
                 </motion.div>
               )}
